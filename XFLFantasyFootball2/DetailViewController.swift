@@ -33,8 +33,8 @@ class DetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         nameField.text = item.name
-        serialField.text = item.serialNumber
-        valueField.text = numberFormatter.string(from: NSNumber(value: item.valueInDollars))
+        serialField.text = item.position
+        valueField.text = numberFormatter.string(from: NSNumber(value: item.seasonPoints))
         dateField.text = dateFormatter.string(from: item.dateCreated)
      }
      

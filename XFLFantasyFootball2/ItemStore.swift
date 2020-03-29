@@ -10,13 +10,17 @@ import UIKit
 
 class ItemStore {
     init(){
-        createItemSpecific(name:"hi", serialNumber: "Hi", valueInDollars: 10)
+        createItemSpecific(name:"P.J Walker", position: "QB", seasonPoints: 115)
+        createItemSpecific(name:"Darnell Pumphrey", position: "RB", seasonPoints: 185)
+        createItemSpecific(name:"Cardale Jones", position: "QB", seasonPoints: 97)
+        createItemSpecific(name:"Rashad Ross", position: "WR", seasonPoints: 106)
+        createItemSpecific(name:"Nick Truesdell", position: "TE", seasonPoints: 52)
     }
     
     var allItems = [Item]()
     
-    @discardableResult func createItemSpecific(name: String, serialNumber: String?, valueInDollars: Int) -> Item {
-        let newItem = Item(name: name, serialNumber: serialNumber, valueInDollars: valueInDollars)
+    @discardableResult func createItemSpecific(name: String, position: String?, seasonPoints: Int) -> Item {
+        let newItem = Item(name: name, position: position, seasonPoints: seasonPoints)
         allItems.append(newItem)
         return newItem
     }

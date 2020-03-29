@@ -10,14 +10,14 @@ import UIKit
 
 class Item: NSObject {
     var name: String
-    var valueInDollars: Int
-    var serialNumber: String?
+    var seasonPoints: Int
+    var position: String?
     let dateCreated:  Date
     
-    init(name: String, serialNumber: String?, valueInDollars: Int){
+    init(name: String, position: String?, seasonPoints: Int){
         self.name = name
-        self.valueInDollars = valueInDollars
-        self.serialNumber  = serialNumber
+        self.seasonPoints = seasonPoints
+        self.position  = position
         self.dateCreated = Date()
         
         super.init()
@@ -38,9 +38,9 @@ class Item: NSObject {
             let randomValue = Int(arc4random_uniform(100))
             let randomSerialNumber = UUID().uuidString.components(separatedBy: "-").first!
             
-            self.init(name: randomName, serialNumber: randomSerialNumber, valueInDollars: randomValue)
+            self.init(name: randomName, position: randomSerialNumber, seasonPoints: randomValue)
         } else{
-            self.init(name: "", serialNumber: nil, valueInDollars: 0)
+            self.init(name: "", position: nil, seasonPoints: 0)
         }
     }
 }

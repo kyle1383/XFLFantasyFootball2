@@ -38,7 +38,7 @@ class ItemsViewController: UITableViewController {
         let item = itemStore.allItems[indexPath.row]
         
         cell.textLabel?.text = item.name
-        cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+        cell.detailTextLabel?.text = String(item.seasonPoints)
         
         return cell 
     }
